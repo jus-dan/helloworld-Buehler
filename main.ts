@@ -7,7 +7,7 @@ eBool.enable,
 OLED.init(128, 64)
 basic.showIcon(IconNames.Yes)
 loops.everyInterval(5000, function () {
-    OLED.writeStringNewLine("Lichtstärke: " + input.lightLevel())
+    OLED.writeStringNewLine("Lichtstärke:" + input.lightLevel())
     if (IoTCube.getStatus(eSTATUS_MASK.JOINED)) {
         basic.showIcon(IconNames.SmallHeart)
         IoTCube.addAnalogInput(input.lightLevel(), 1)
